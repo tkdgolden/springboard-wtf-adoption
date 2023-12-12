@@ -51,7 +51,7 @@ def add():
     
 @app.route('/<int:pet_id>', methods=["POST", "GET"])
 def pet(pet_id):
-    """ Pet add form """
+    """ Pet edit form """
 
     pet = Pet.query.get_or_404(pet_id)
     form = EditPetForm(obj=pet)
