@@ -12,3 +12,10 @@ class AddPetForm(FlaskForm):
     age = IntegerField("Age", validators=[Optional(), NumberRange(0, 30)])
     notes = TextAreaField("Tell us about them:", validators=[Optional()])
     available = BooleanField("Currently Available", validators=[Optional()], default=True)
+
+class EditPetForm(FlaskForm):
+    """ Form for editing pets """
+
+    photo_url = URLField("Image URL", validators=[Optional()])
+    notes = TextAreaField("Tell us about them:", validators=[Optional()])
+    available = BooleanField("Currently Available", validators=[Optional()], default=True)
